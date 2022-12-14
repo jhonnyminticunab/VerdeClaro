@@ -49,19 +49,19 @@ public class ProductosController {
 		Optional<Productos> op = service.findById(id);
 		
 		if (!op.isEmpty()) {
-			Productos ProductosUpdate = op.get();
-			ProductosUpdate.setCodigo(productos.getCodigo());
-			ProductosUpdate.setNombre(productos.getNombre());
-			ProductosUpdate.setDescripcion(productos.getDescripcion());
-			ProductosUpdate.setImagen(productos.getImagen());
-			ProductosUpdate.setCantidadMaxima(productos.getCantidadMaxima());
-			ProductosUpdate.setCantidadMinima(productos.getCantidadMinima());
-			ProductosUpdate.setStock(productos.getStock());
-			ProductosUpdate.setPrecioUnitarioCompra(productos.getPrecioUnitarioCompra());
-			ProductosUpdate.setIva(productos.getIva());
-			ProductosUpdate.setDescuento(productos.getDescuento());
-			ProductosUpdate.setEstado(productos.getEstado());
-			return service.save(ProductosUpdate);
+			Productos productosUpdate = op.get();
+			productosUpdate.setCodigo(productos.getCodigo());
+			productosUpdate.setNombre(productos.getNombre());
+			productosUpdate.setDescripcion(productos.getDescripcion());
+			productosUpdate.setImagen(productos.getImagen());
+			productosUpdate.setCantidadMaxima(productos.getCantidadMaxima());
+			productosUpdate.setCantidadMinima(productos.getCantidadMinima());
+			productosUpdate.setStock(productos.getStock());
+			productosUpdate.setPrecioUnitarioCompra(productos.getPrecioUnitarioCompra());
+			productosUpdate.setIva(productos.getIva());
+			productosUpdate.setDescuento(productos.getDescuento());
+			productosUpdate.setEstado(productos.getEstado());
+			return service.save(productosUpdate);
 		}
 		
 		return productos;
