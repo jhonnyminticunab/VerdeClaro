@@ -60,6 +60,9 @@ public class ProductosController {
 			productosUpdate.setPrecioUnitarioCompra(productos.getPrecioUnitarioCompra());
 			productosUpdate.setIva(productos.getIva());
 			productosUpdate.setDescuento(productos.getDescuento());
+			productosUpdate.setCategoriasId(productos.getCategoriasId());
+			productosUpdate.setMarcasId(productos.getMarcasId());
+			productosUpdate.setUnidadMedidaId(productos.getUnidadMedidaId());
 			productosUpdate.setEstado(productos.getEstado());
 			return service.save(productosUpdate);
 		}

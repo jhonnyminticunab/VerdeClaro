@@ -40,7 +40,6 @@ public class UnidadesMedidasController {
             unidadesMedidasUpdate.setCodigo(unidadesMedidas.getCodigo());
             unidadesMedidasUpdate.setNombre(unidadesMedidas.getNombre());
             unidadesMedidasUpdate.setDescripcion(unidadesMedidas.getDescripcion());
-            unidadesMedidasUpdate.setProductosId(unidadesMedidas.getProductosId());
             unidadesMedidasUpdate.setEstado(unidadesMedidas.getEstado());
             return service.save(unidadesMedidasUpdate);
         }

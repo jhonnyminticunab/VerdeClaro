@@ -1,7 +1,7 @@
 package com.verde_claro.verde.Collection;
 
 import org.springframework.data.annotation.Id;
-//import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -44,16 +44,15 @@ public class Productos {
 
     @Field("estado")
     private String estado;
-/*
-    @DBRef
-    private Categorias categoriaId
 
     @DBRef
-    private Marcas marcasId
+    private Categorias categoriasId;
 
     @DBRef
-    private UnidadesMedidas unidadMedidaId
-*/
+    private Marcas marcasId;
+
+    @DBRef
+    private UnidadesMedidas unidadMedidaId;
 
     public String getId() {
         return id;
@@ -151,4 +150,28 @@ public class Productos {
         this.estado = estado;
     }
 
+    public Categorias getCategoriasId() {
+        return categoriasId;
+    }
+
+    public void setCategoriasId(Categorias categoriasId) {
+        this.categoriasId = categoriasId;
+    }
+
+    public Marcas getMarcasId() {
+        return marcasId;
+    }
+
+    public void setMarcasId(Marcas marcasId) {
+        this.marcasId = marcasId;
+    }
+
+    public UnidadesMedidas getUnidadMedidaId() {
+        return unidadMedidaId;
+    }
+
+    public void setUnidadMedidaId(UnidadesMedidas unidadMedidaId) {
+        this.unidadMedidaId = unidadMedidaId;
+    }
+    
 }
