@@ -1,6 +1,7 @@
 package com.verde_claro.verde.Collection;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -15,6 +16,12 @@ public class RolesPermisos {
 
     @Field("permiso_id")
     private Integer permiso_id;
+
+    @DBRef
+    private Roles rolesId;
+
+    @DBRef
+    private Permisos permisosId;
 
     public String getId() {
         return id;
