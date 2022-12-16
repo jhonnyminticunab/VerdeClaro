@@ -31,6 +31,9 @@ public class Pedidos {
     @Field("estado")
     private String estado;
 
+    @DBRef
+    private Users usersId;
+
     public String getId() {
         return id;
     }
@@ -95,9 +98,16 @@ public class Pedidos {
         this.estado = estado;
     }
 
+    public Users getUsersId() {
+        return usersId;
+    }
+
+    public void setUsersId(Users usersId) {
+        this.usersId = usersId;
+    }
+
     
-    /*@DBRef
-    private Usuarios usuarioId
-*/
+
+    
 
 }
